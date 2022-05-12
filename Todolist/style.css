@@ -58,6 +58,11 @@ body{
     cursor: pointer;
 }
 
+.wrapper .Todolist{
+    max-height: 250px;
+    overflow-y: auto; /*세로로 내용이 많아질경우 숨기기(스크롤생김)*/
+}
+
 .Todolist li{
     list-style: none;
     line-height: 40px; /*수직 가운데 정렬 : 보통 height랑 같은 숫자를 쓴다*/
@@ -68,19 +73,29 @@ body{
     border-radius: 3px;
     font-weight: 600;
     cursor: default;
+    overflow: hidden; /*숨기기*/
 }
 .Todolist li span{ /*span : 특정 스타일을 바꾸는 태그*/
     position: absolute;
     width: 40px;
     height: 40px;
-    right:  0px;
+    right:  -30px; /*hover로 오른쪽 0-> -30으로 이동*/
     border-radius: 3px;
     color: rgb(255, 255, 255);
     background: rgb(132, 68, 160);
     text-align: center;
     cursor: pointer;
+    transition: all 0.8s ease;/*속도 조절*/
 }
 
+/*hover : 가상클래스*/
+.Todolist li:hover span{
+    right: 0;
+
+}
+
+
+/*아이콘 위치 조정*/
 .Todolist li span i{
     margin-left: -30px;
 }
