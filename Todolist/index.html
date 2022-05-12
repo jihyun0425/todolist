@@ -1,39 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<link>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Todolist</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Koulen&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&display=swap" rel="stylesheet">
 
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todolist</title>
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Koulen&display=swap"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&display=swap"/>
+    <script src="list.js"></script>
 </head>
 <body>
     <div class="wrapper">
-        <header>TodoList</header>
-        <div class = "inputField">
-            <input type="text" placeholder="할 일 추가하기">
-            <button><i class = "fas fa-plus"></i></button>
-        </div>
-        <ul class = "Todolist">
-            <li>코딩 공부하기 <span><i class = "fas fa-trash"></i></span></li>
-            <li>운동하기 <span><i class = "fas fa-trash"></i></span></li>
-            <li>운동하기 <span><i class = "fas fa-trash"></i></span></li>
-            <li>운동하기 <span><i class = "fas fa-trash"></i></span></li>
-            <li>운동하기 <span><i class = "fas fa-trash"></i></span></li>
-        </ul>
-        <div class = "footer">
-            <span >할일 몇개</span>
-            <button>모두 삭제</button>
-        </div>
-    </div>  
+    <header>TodoList</header>
+    <div class="inputField">
+        <input type="text" id="addValue" placeholder="할 일 추가하기" />
+        <button onclick=addTodo()><i class="xi-plus xi-2x"></i></button>
+    </div>
+    <ul id="newTodo" class="Todolist">
+        <li><div id='result'></div> <span><i class="fas fa-trash"></i></span></li>
+        
+    </ul>
+    <div class="footer">
+        
+        <button>모두 삭제</button>
+    </div>
+    </div>
 </body>
 </html>
