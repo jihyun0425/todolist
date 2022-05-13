@@ -67,7 +67,7 @@ body{
 }
 
 .Todolist li{
-    width: 600px;
+    width: 700px;
     list-style: none;
     line-height: 40px; /*수직 가운데 정렬 : 보통 height랑 같은 숫자를 쓴다*/
     position: relative;
@@ -76,7 +76,7 @@ body{
     background: rgb(241, 242, 241);
     border-radius: 3px;
     font-weight: 600;
-    overflow: hidden; /*숨기기 */
+    overflow: hidden; /*숨기기*/
 }
 
 .Todolist li span{ /*span : 특정 스타일을 바꾸는 태그*/
