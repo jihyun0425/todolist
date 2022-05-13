@@ -12,7 +12,7 @@ body{
 }
 .wrapper{
     margin: 120px auto;
-    max-width: 400px;
+    max-width: 700px;
     width: 100%;
     background: #fbfaf6;
     padding: 25px;
@@ -31,9 +31,9 @@ body{
 /*.wrapper안에 있는 것을 부를때(태그 설정 방법은 무궁무진)*/
 .wrapper .inputField{
     display: flex;  
-    margin: 5px auto 20px ; /**/
+    margin: 5px auto 20px ; 
     height: 45px;
-    width: 22.7rem;
+    width: 700px;
     font-family: 'Nanum Gothic Coding', monospace;
 }
 .xi-plus{ /* +버튼 굵기지정  */
@@ -43,7 +43,7 @@ body{
 .inputField input{
     color: black;
     padding-left: 15px;
-    width: 85%;
+    width: 600px;
     height: 100%;
     border: 1px solid #F5FFFA;
     font-size: 15px;
@@ -52,7 +52,7 @@ body{
 }
 
 .inputField button{
-    width: 40px;
+    width: 50px;
     height: 100%;
     border: none;
     border-radius: 3px;
@@ -61,11 +61,13 @@ body{
 }
 
 .wrapper .Todolist{
-    max-height: 250px;
+    display: flex;
+    max-height: 300px;
     overflow-y: auto; /*세로로 내용이 많아질경우 숨기기(스크롤생김)*/
 }
 
 .Todolist li{
+    width: 600px;
     list-style: none;
     line-height: 40px; /*수직 가운데 정렬 : 보통 height랑 같은 숫자를 쓴다*/
     position: relative;
@@ -74,34 +76,27 @@ body{
     background: rgb(241, 242, 241);
     border-radius: 3px;
     font-weight: 600;
-    cursor: default;
-    overflow: hidden; /*숨기기*/
+    overflow: hidden; /*숨기기 */
 }
+
 .Todolist li span{ /*span : 특정 스타일을 바꾸는 태그*/
     position: absolute;
     width: 40px;
     height: 40px;
-    right:  -30px; /*hover로 오른쪽 0-> -30으로 이동*/
     border-radius: 3px;
+    border: none;
     color: rgb(255, 255, 255);
     background: rgb(132, 68, 160);
     text-align: center;
     cursor: pointer;
     transition: all 0.8s ease;/*속도 조절*/
-}
+}  
 
-/*hover : 가상클래스*/
+
+/* hover : 가상클래스
 .Todolist li:hover span{
     right: 0;
-
-}
-
-
-/*아이콘 위치 조정*/
-.Todolist li span i{
-    margin-left: -30px;
-}
-
+} */
 .wrapper .footer{
     font-weight: 600;
     text-indent: 15px;
