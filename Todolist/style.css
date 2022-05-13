@@ -28,7 +28,7 @@ body{
     font-family: 'Koulen', cursive;
 }
 
-/*.wrqpper안에 있는 것을 부를때(태그 설정 방법은 무궁무진)*/
+/*.wrapper안에 있는 것을 부를때(태그 설정 방법은 무궁무진)*/
 .wrapper .inputField{
     display: flex;  
     margin: 5px auto 20px ; /**/

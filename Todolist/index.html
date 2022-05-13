@@ -14,23 +14,23 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&display=swap"/>
-    <script src="list.js"></script>
 </head>
 <body>
     <div class="wrapper">
-    <header>TodoList</header>
-    <div class="inputField">
-        <input type="text" id="addValue" placeholder="할 일 추가하기" />
-        <button onclick=addTodo()><i class="xi-plus xi-2x"></i></button>
+        <header>TodoList</header>
+        <div class="inputField">
+            <input type="text" id="addValue" placeholder="할 일 추가하기" />
+            <button type="button" id = "btn" onclick="addTodo()"><i class="xi-plus xi-2x"></i></button>
+        </div>
+        <div>
+        <ul id="addTodo" class="Todolist"> 
+            <li><div id='result'></i></div></li>
+        </ul>
+        </div>
+        <div class="footer">
+            <button>모두 삭제</button>
+        </div>
     </div>
-    <ul id="newTodo" class="Todolist">
-        <li><div id='result'></div> <span><i class="fas fa-trash"></i></span></li>
-        
-    </ul>
-    <div class="footer">
-        
-        <button>모두 삭제</button>
-    </div>
-    </div>
+    <script src="list.js"></script>
 </body>
 </html>
