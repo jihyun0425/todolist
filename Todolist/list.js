@@ -1,9 +1,11 @@
+
 const btn = document.getElementById('btn'); //버튼
 let addValue = document.getElementById('addValue'); //할일 입력
 let result = document.getElementById('result');// 추가된 할일
 
 //할일 추가시
 function addTodo(){
+    
     let list = document.createElement("li");
     let del = document.createElement('button');
     list.innerHTML = addValue.value;
@@ -23,6 +25,7 @@ function addTodo(){
     //list.innerHTML+="<button type='button' id ='remove' onclick='removeList()'><i class='xi-trash xi-2x'></span></i></button>";
     
     addValue.value = "";       //할일 입력창 초기화
+    addValue.focus();           //강제 커서 깜빡임
     list.addEventListener("click", function(){  //할일 완료 후 클릭시 밑줄로 표시
         list.style.textDecoration = "line-through";
         list.style.color = "gray";  //클릭시 색변환
@@ -40,7 +43,7 @@ function allClearList(e){
     result.style.color = "red";
     result.innerHTML='';
 }
-/* <button type="button" id = "removebtn" onclick="remove()"><span><i class="xi-trash xi-2x"></span></i></button> */
+
 //입력값 한개만 나오는 코드
 // function addTodo(){   //+버튼을 누르면
     // const addValue = document.getElementById('addValue').value;
