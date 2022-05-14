@@ -2,21 +2,35 @@ const btn = document.getElementById('btn'); //버튼
 let addValue = document.getElementById('addValue'); //할일 입력
 let result = document.getElementById('result');// 추가된 할일
 
-
+//할일 추가시
 function addTodo(){
     let list = document.createElement("li");
     let del = document.createElement('button');
     list.innerHTML = addValue.value;
-    result.appendChild(list);
-    list.appendChild(del);
-    /*할일 추가할 때마다 삭제버튼도 같이 추가돼기 */
-    // list.innerHTML+="<button type='button' id ='remove' onclick='removeList()'><i class='xi-trash xi-2x'></span></i></button>";
-    addValue.value = ""; //할일 입력창 초기화
-    //할일 완료 후 클릭시 밑줄 표시
-    list.addEventListener("click", function(){
+    result.appendChild(list); //추가된 할일에 할일 리스트 추가하기
+    list.appendChild(del);    //할일 리스트 추가시 삭제버튼도 추가
+    del.innerText = "X";      //삭제버튼에 들어갈 'x'자 문자
+    del.addEventListener("click", deleteList); //삭제버튼 클릭시 리스트지우기 이벤트 실행
+    
+    /*할일 추가할 때마다 삭제버튼도 같이 추가돼기-이 방법도 가능 */
+    //list.innerHTML+="<button type='button' id ='remove' onclick='removeList()'><i class='xi-trash xi-2x'></span></i></button>";
+    
+    addValue.value = "";       //할일 입력창 초기화
+    list.addEventListener("click", function(){  //할일 완료 후 클릭시 밑줄로 표시
         list.style.textDecoration = "line-through";
     })
 }
+
+//할일 삭제시
+function deleteList(e){ //삭제 버튼(x) 클릭시 
+    let removeOne = e.target.parentElement;  //선택한 목록 한개만 지우기(부모 객체를 지운다)
+    removeOne.remove();
+}
+
+window.onload = function(){
+    list.style.width = "100%";
+}
+
 
 
 /* <button type="button" id = "removebtn" onclick="remove()"><span><i class="xi-trash xi-2x"></span></i></button> */
