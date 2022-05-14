@@ -14,9 +14,9 @@ body{
     margin: 120px auto;
     max-width: 700px;
     width: 100%;
-    background: #fbfaf6;
+    background: wheat;
     padding: 25px;
-    border-radius: 5px;
+    border-radius: 6px;
 }
 
 .wrapper header{
@@ -34,10 +34,11 @@ body{
     margin: 5px auto 20px ; 
     height: 45px;
     width: 700px;
-    font-family: 'Nanum Gothic Coding', monospace;
+    font-family:'Hi Melody', cursive;
 }
 .xi-plus{ /* +버튼 굵기지정  */
     font-weight: bold;
+    color: wheat;
 }
 
 .inputField input{
@@ -45,7 +46,7 @@ body{
     padding-left: 15px;
     width: 600px;
     height: 100%;
-    border: 1px solid #F5FFFA;
+    border: none;
     font-size: 15px;
     border-radius: 5px;
     outline: none;  /*inputbox 클릭시 테두리 안보이게*/
@@ -56,15 +57,13 @@ body{
     height: 100%;
     border: none;
     border-radius: 3px;
-    background: rgb(250, 227, 101);
+    background: rgb(6, 6, 6);
     /* background: rgb(249, 233, 143); */
     cursor: pointer;
 }
 
 .wrapper .Todolist{
     display: flex;
-    /* max-height: 200px; */
-    /* overflow-y: auto; 세로로 내용이 많아질경우 숨기기(스크롤생김) */
 }
 
 .Todolist li{
@@ -76,9 +75,8 @@ body{
     text-indent: 15px; /*들여쓰기*/
     background: rgb(241, 242, 241);
     border-radius: 3px;
-    font-weight: 600;
+    font-weight: 400;
     cursor: pointer;
-    /* overflow: hidden; 숨기기 */
 }
 /*Todolist li span{ /*span : 특정 스타일을 바꾸는 태그
     position: absolute;
@@ -104,6 +102,7 @@ body{
 }
 
 .footer button{
+    color: wheat;
     cursor: pointer;
     font-size: 17px;
     font-weight: 900;
@@ -111,10 +110,10 @@ body{
     width: 100px;
     height: 40px;
     border: none;
-    border-radius: 3px;
-    background: rgb(250, 227, 101);
+    border-radius: 9px;
+    background: rgb(6, 6, 6);
 }
 .footer button:hover{
-    color :rgb(174, 6, 6);
-    background-color: rgb(194, 188, 188);
+    color : rgb(6, 6, 6);
+    background-color: white;
 }

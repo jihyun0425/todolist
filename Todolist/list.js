@@ -13,7 +13,7 @@ function addTodo(){
     list.innerHTML = addValue.value;
     result.appendChild(list); //추가된 할일에 할일 리스트 추가하기
     list.appendChild(del);    //할일 리스트 추가시 삭제버튼도 추가    
-    del.innerText = "X";      //삭제버튼에 들어갈 'x'자 문자
+    del.innerText = "x";      //삭제버튼에 들어갈 'x'자 문자
     del.style.fontSize = "20px";
     del.style.border = "none";
     del.style.float = "right";
@@ -32,7 +32,7 @@ function addTodo(){
         list.style.textDecoration = "line-through";
         list.style.color = "gray";  //클릭시 색변환
     })
-    }
+}
 }
 
 //할일 삭제시
@@ -42,10 +42,24 @@ function deleteList(e){ //삭제 버튼(x) 클릭시
 }
 
 // //모두 삭제시
+// function allClearList(e){
+//     if(confirm("정말 삭제하시겠습니까?")==true){ //취소메시지가 true면
+//         result.innerText='';                    //전체 삭제
+//     }else{
+//         return false;                           //취소
+//     }
+// }
 function allClearList(e){
-    result.innerHTML='';
+    if(confirm("정말 삭제하시겠습니까?")==true){ //취소메시지가 true(ok)일때
+        if(result.innerText==''){                      //목록칸이 비어있다면
+            alert("삭제할 목록이 없습니다");            //삭제할 목록이 없다는 경고창뜨기
+        }else{                                         //삭제할 목록이 있다면
+            result.innerText='';                       //전체 삭제
+        }
+    }else{                                      //취소메시지가 false(no)일때
+        return false;                           //삭제 취소
+    }
 }
-
 //입력값 한개만 나오는 코드
 // function addTodo(){   //+버튼을 누르면
     // const addValue = document.getElementById('addValue').value;
@@ -55,3 +69,4 @@ function allClearList(e){
 
 //변수지정 방법 : const, let, var
 //css에는 꾸미는 기능만, js에서 동적으로 처리하는 기능만 넣은 상태
+
