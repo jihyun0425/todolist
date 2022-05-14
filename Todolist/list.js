@@ -5,7 +5,9 @@ let result = document.getElementById('result');// 추가된 할일
 
 //할일 추가시
 function addTodo(){
-    
+    if(addValue.value==false){ /*''가능 */
+        alert('내용을 입력하세요!');
+    }else{
     let list = document.createElement("li");
     let del = document.createElement('button');
     list.innerHTML = addValue.value;
@@ -30,6 +32,7 @@ function addTodo(){
         list.style.textDecoration = "line-through";
         list.style.color = "gray";  //클릭시 색변환
     })
+    }
 }
 
 //할일 삭제시
@@ -40,7 +43,6 @@ function deleteList(e){ //삭제 버튼(x) 클릭시
 
 // //모두 삭제시
 function allClearList(e){
-    result.style.color = "red";
     result.innerHTML='';
 }
 
