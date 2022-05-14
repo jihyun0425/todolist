@@ -15,6 +15,7 @@ function addTodo(){
     del.style.float = "right";
     del.style.right = "17px";
     del.style.marginTop = "10px";
+    del.style.cursor = "pointer";
     del.addEventListener("click", deleteList); //삭제버튼 클릭시 리스트지우기 이벤트 실행
     del.style.position='relative';
     
@@ -36,6 +37,7 @@ function deleteList(e){ //삭제 버튼(x) 클릭시
 
 // //모두 삭제시
 function allClearList(e){
+    result.style.color = "red";
     result.innerHTML='';
 }
 /* <button type="button" id = "removebtn" onclick="remove()"><span><i class="xi-trash xi-2x"></span></i></button> */

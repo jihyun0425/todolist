@@ -56,7 +56,8 @@ body{
     height: 100%;
     border: none;
     border-radius: 3px;
-    background: rgb(249, 233, 143);
+    background: rgb(250, 227, 101);
+    /* background: rgb(249, 233, 143); */
     cursor: pointer;
 }
 
@@ -79,8 +80,6 @@ body{
     cursor: pointer;
     /* overflow: hidden; 숨기기 */
 }
-.Todolist li:hover{
-}   
 /*Todolist li span{ /*span : 특정 스타일을 바꾸는 태그
     position: absolute;
     width: 40px;
@@ -118,5 +117,9 @@ body{
     height: 40px;
     border: none;
     border-radius: 3px;
-    background: rgb(249, 233, 143);
+    background: rgb(250, 227, 101);
+}
+.footer button:hover{
+    color :rgb(153, 16, 16);
+    background-color: rgb(180, 179, 179);
 }
