@@ -73,14 +73,12 @@ function saveTodos() {
     localStorage.setItem('todos', JSON.stringify(todos));
 }
 
-$(document).ready(function() {
-    $("#copy").on("click", function () {
-        html2canvas($('#copy_div')[0]).then(function (canvas){
-            var img = document.createElement("a");
-            img.download = "test.png";
-            img.href = canvas.toDataURL();
-            document.body.appendChild(img);
-            img.click();
-        });
+document.getElementById('copy').addEventListener('click', function() {
+    html2canvas(document.getElementById('copy_div')).then(function(canvas) {
+        var img = document.createElement("a");
+        img.download = "test.png";
+        img.href = canvas.toDataURL();
+        document.body.appendChild(img);
+        img.click();
     });
 });
