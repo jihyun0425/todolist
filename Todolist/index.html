@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Todolist</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
     <link rel="stylesheet" href="style.css"/>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -18,21 +20,23 @@
     <link href="https://fonts.googleapis.com/css2?family=Hi+Melody&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="wrapper">
+    <div class="wrapper" id="copy_div">
         <header>TodoList</header>        
-        <div class="inputField">
+        <div class="inputField" style="display: flex; justify-content: center">
             <input type="text" id="addValue" placeholder="할 일 추가하기" autofocus/><!--자동포커스-->
-            <button type="button" id = "btn" onclick="addTodo()"><i class="xi-plus xi-2x"></i></button>
+            <button type="button" id = "btn" onclick="addTodo()" ><i class="xi-plus xi-2x" style="width: 50px;"></i></button>
         </div>
         <div>
-            <ul id="addTodo" class="Todolist"> 
+            <ul id="addTodo" class="Todolist">
                 <li><div id='result'></div></li>
             </ul>
         </div>
         <div class="footer">
+            <button type="button" id="copy" style="margin-right: 100px">저장</button>
             <button type="button" id = "allClear" onclick="allClearList()">모두 삭제</button>
         </div>
     </div>
+
     <script src="list.js"></script>
 </body>
 </html>

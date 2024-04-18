@@ -12,7 +12,8 @@ body{
 }
 .wrapper{
     margin: 120px auto;
-    max-width: 700px;
+    max-width: 300px;
+    min-height: 300px;
     width: 100%;
     background: wheat;
     padding: 25px;
@@ -20,7 +21,7 @@ body{
 }
 .wrapper header{
     margin-bottom: 30px;
-    font-size: 50px;
+    font-size: 45px;
     font-weight: 700;
     letter-spacing: 15px;
     text-align: center;
@@ -32,7 +33,7 @@ body{
     display: flex;  
     margin: 5px auto 20px ; 
     height: 45px;
-    width: 700px;
+    width: 200px;
     font-family:'Hi Melody', cursive;
 }
 .xi-plus{ /* +버튼 굵기지정  */
@@ -42,7 +43,7 @@ body{
 .inputField input{
     color: black;
     padding-left: 15px;
-    width: 600px;
+    width: 200px;
     height: 100%;
     border: none;
     font-size: 15px;
@@ -50,7 +51,7 @@ body{
     outline: none;  /*inputbox 클릭시 테두리 안보이게*/
 }
 .inputField button{
-    width: 50px;
+    width: 70px;
     height: 100%;
     border: none;
     border-radius: 3px;
@@ -62,7 +63,7 @@ body{
     display: flex;
 }
 .Todolist li{
-    width: 650px;
+    width: 250px;
     list-style: none;
     line-height: 40px; /*수직 가운데 정렬 : 보통 height랑 같은 숫자를 쓴다*/
     position: relative;
@@ -77,18 +78,18 @@ body{
     font-weight: 600;
     text-indent: 15px;
     display: flex;
+    justify-content: right;
     width: 100%;
     margin-top: 30px;
-    justify-content: right;/*flex때문에 써준다*/
 }
 .footer button{
     color: wheat;
     cursor: pointer;
-    font-size: 17px;
+    font-size: 10px;
     font-weight: 900;
     padding: 6px 10px;
-    width: 100px;
-    height: 40px;
+    width: 80px;
+    height: 30px;
     border: none;
     border-radius: 9px;
     background: rgb(6, 6, 6);
