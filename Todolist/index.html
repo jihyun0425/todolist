@@ -1,28 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Todolist</title>
     <link rel="stylesheet" href="./style.css"/>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Koulen&display=swap"/>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&display=swap"/>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Hi+Melody&display=swap" rel="stylesheet">
 </head>
 <body>
 <div class="wrapper" id="copy_div">
     <header>TodoList</header>
-    <div class="inputField" style="display: flex; justify-content: center">
+    <div class="inputField" style="display: flex; justify-content: center; ">
         <label for="addValue"></label><input type="text" id="addValue" placeholder="할 일 추가하기" autofocus/><!--자동포커스-->
-        <button type="button" id = "btn" onclick="addTodo()" ><i class="xi-plus xi-2x" style="width: 50px;"></i></button>
+        <button type="button" id = "btn" onclick="addTodo()" style="color: #fff; width: 50px;" >add </button>
     </div>
     <div>
         <ul id="addTodo" class="Todolist">
